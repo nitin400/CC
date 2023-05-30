@@ -1,0 +1,34 @@
+Install the net-tools to know the IP's of the instance.
+
+$ sudo apt install net-tools
+$ sudo apt update
+To know the IP address
+$ ifconfig
+Now the IP will be in the range of 172.168.2.*
+
+ * - any number in the range of 1 to 254 (total 256 addresses)
+Now create a file and write something into it.
+$ touch tranfer.txt
+$ nano transfer.txt
+-> hey, How are you?
+ctrl + X and save
+Some Commands for Linux Based Distros:
+
+ls - list all the files and directories
+cat - show the content inside a file
+scp - it will help us to copy files from one vm to other
+cd - change directory
+mkdir - make a new directory
+touch - it makes a new file 
+nano - nano is a editor inside linux os
+
+If your file is on the VM with IP 172.168.2.4 and the second VM's IP is 172.168.2.5.
+
+Tranfer the file using SCP
+
+$ scp tranfer.txt vagrant@172.168.2.5:/home/vagrant
+Put in the password of the 2nd VM and done.
+
+Check for the file in the Second VM under the /home/vagrant directory.
+
+Done..!!!!
